@@ -25,24 +25,24 @@ Train the model on EEG data:
 For LSTM and Prior Shift Bag generator:
 ```bash
 python train_lequa.py   
---train_name eeg_test  
- --network gmnet   
- --network_parameters experiments/parameters/common_parameters_EEG.json   
- --feature_extraction lstm
-  --bag_generator QLibCovariateShiftBagGenerator
- --dataset EEG   
- --cuda_device cuda:0
+--train_name smartfall_transformer  
+--network gmnet   
+--network_parameters experiments/parameters/common_parameters_SMARTFALL.json   
+--feature_extraction transformers
+--bag_generator QLibPriorShiftBagGenerator
+--dataset SMARTFALL   
+--cuda_device cuda:0
  ```
  For transformers and APR Bag generator:
  ```bash
 python train_lequa.py   
---train_name eeg_test  
- --network gmnet   
- --network_parameters experiments/parameters/common_parameters_EEG.json   
- --feature_extraction transformers
-  --bag_generator APRBagGenerator
- --dataset EEG   
- --cuda_device cuda:0
+--train_name smartfall_transformer  
+--network gmnet   
+--network_parameters experiments/parameters/common_parameters_SMARTFALL.json    
+--feature_extraction transformers
+--bag_generator APRBagGenerator
+--dataset SMARTFALL   
+--cuda_device cuda:0
  ```
 
 **Arguments:**
@@ -52,7 +52,7 @@ python train_lequa.py
 - `--feature_extraction` - Backbone feature extractor
 - `--bag_generator` - Bag sampling method
 - `--standarize` - Apply feature standardization
-- `--dataset` - Dataset to use (EEG, EMG, etc.)
+- `--dataset` - Dataset to use (EMG, SMARTFALL etc.)
 - `--cuda_device` - Specify CUDA device for GPU training
 
 ## Contact
