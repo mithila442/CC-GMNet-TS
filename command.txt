@@ -1,0 +1,9 @@
+elx12@cs-233522:~/data_mining_project/gmnet-main/gmnet-main$ python train_lequa.py \
+  --train_name eeg_test \
+  --network gmnet \
+  --network_parameters experiments/parameters/common_parameters_EEG.json \
+  --feature_extraction timeseriescnn \
+  --bag_generator UnlabeledMixerBagGenerator \
+  --standarize \
+  --dataset EEG \
+  --cuda_device cuda:0
