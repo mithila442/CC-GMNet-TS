@@ -21,28 +21,28 @@ conda activate cc-gmnet-ts
 
 
 ## Usage
-Train the model on EEG data:
-For LSTM and Prior Shift Bag generator:
+Train the model on SMARTFALL data:
+For Transformer and Prior Shift Bag generator:
 ```bash
-python train_lequa.py   
---train_name smartfall_transformer  
---network gmnet   
---network_parameters experiments/parameters/common_parameters_SMARTFALL.json   
---feature_extraction transformers
---bag_generator QLibPriorShiftBagGenerator
---dataset SMARTFALL   
---cuda_device cuda:0
+python train_lequa.py \
+  --train_name smartfall_transformer \
+  --network gmnet \
+  --network_parameters experiments/parameters/common_parameters_SMARTFALL.json \
+  --feature_extraction transformers \
+  --bag_generator QLibPriorShiftBagGenerator \
+  --dataset SMARTFALL \
+  --cuda_device cuda:0
  ```
  For transformers and APR Bag generator:
  ```bash
-python train_lequa.py   
---train_name smartfall_transformer  
---network gmnet   
---network_parameters experiments/parameters/common_parameters_SMARTFALL.json    
---feature_extraction transformers
---bag_generator APRBagGenerator
---dataset SMARTFALL   
---cuda_device cuda:0
+python train_lequa.py \
+  --train_name smartfall_transformer \
+  --network gmnet \
+  --network_parameters experiments/parameters/common_parameters_SMARTFALL.json \
+  --feature_extraction transformers \
+  --bag_generator APRBagGenerator \
+  --dataset SMARTFALL \
+  --cuda_device cuda:0
  ```
 
 **Arguments:**
